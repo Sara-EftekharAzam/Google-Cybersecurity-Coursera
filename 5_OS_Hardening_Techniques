@@ -1,0 +1,78 @@
+# **Cybersecurity Incident Report**
+
+## **Section 1: Identify the type of attack that may have caused this network interruption**
+
+One potential explanation for the website’s security issue is:
+A **Brute Force Attack**, which is a type of **cyberattack** that involves repeatedly attempting different username and password combinations until the correct login credentials are found.
+
+The logs show that:
+
+* The attacker attempted multiple login requests on the **web host’s administrative account** using several **known default passwords**.
+* After several repeated attempts, the attacker successfully guessed the correct password and gained unauthorized access to the **administrative control panel** of `yummyrecipesforme.com`.
+* Once logged in, the attacker **modified the website’s source code** and inserted a **malicious JavaScript function**.
+* The malicious code prompted users to **download an executable file**, which upon execution redirected the users’ browsers to a **fake website** (`greatrecipesforme.com`) containing malware.
+* The attacker then **changed the administrator password**, locking out the legitimate website owner from regaining access.
+
+This event could be:
+A **Brute Force Compromise Attack** on the website’s admin panel, followed by a **malware injection and redirection attack**, designed to spread malware and steal user data.
+
+---
+
+## **Section 2: Explain how the attack is causing the website to malfunction**
+
+When website visitors access `yummyrecipesforme.com`, their browsers use several network protocols across the **TCP/IP model** to communicate with the server.
+
+The tcpdump logs show the following sequence of events:
+
+1. **DNS Protocol (Application Layer):**
+   The browser sends a **DNS request** (`A? yummyrecipesforme.com`) to `dns.google.domain` to resolve the domain name into an IP address. The DNS server replies with the IP address `203.0.113.22`.
+
+2. **HTTP Protocol (Application Layer over TCP):**
+   The browser initiates a **TCP three-way handshake** with the web server:
+
+   * **SYN:** The client sends a SYN packet to initiate a connection to the web server on port 80 (HTTP).
+   * **SYN-ACK:** The server responds with a SYN-ACK, acknowledging the connection.
+   * **ACK:** The client sends an ACK to establish the connection.
+     Once the handshake completes, the browser sends an **HTTP GET request** for the main webpage.
+
+3. **Malware Download and Execution:**
+   The compromised website responds with HTML content containing **embedded JavaScript**.
+   This script triggers the browser to **download an executable file** (malware) under the pretense of a browser update or free recipe offer.
+
+4. **Redirection to Malicious Domain:**
+   After the user runs the downloaded file, the browser sends a new **DNS request** for `greatrecipesforme.com`, which resolves to IP `192.0.2.17`.
+   The browser then initiates another **HTTP session** with that IP, where the malware is hosted.
+
+The logs confirm this flow:
+
+```
+DNS → yummyrecipesforme.com → HTTP (port 80) → file download
+DNS → greatrecipesforme.com → HTTP (port 80) → redirected malware site
+```
+
+**How the attack caused the malfunction:**
+Because the attacker gained administrative access and embedded malicious JavaScript, the website began serving harmful content to users. Visitors experienced **unauthorized file downloads** and **browser redirections**. Once executed, the malware caused **system slowdowns** and redirected traffic away from the legitimate website, damaging both the website’s integrity and user trust.
+
+---
+
+## **Section 3: Recommendations and Preventive Actions**
+
+To prevent similar **brute force attacks** in the future, it is recommended to **limit the number of failed login attempts** for administrative accounts.
+
+**Reasoning:**
+Limiting login attempts helps prevent attackers from making unlimited password guesses. When a user exceeds the allowed number of failed logins (e.g., 5), the account is temporarily locked or the login page is delayed, making automated brute force attacks ineffective.
+
+Additional measures that can strengthen protection include:
+
+* **Implementing two-factor authentication (2FA):** Requires an additional verification step, even if the password is compromised.
+* **Using strong, non-default passwords:** Default or weak passwords are easily guessed through brute force methods.
+* **Monitoring login attempts:** Alert administrators to repeated failed logins or suspicious activity.
+
+---
+
+**Summary:**
+The incident involved a **brute force attack** on the website’s administrative login, leading to unauthorized access, **malware injection**, and **user redirection** to a fake website.
+The network protocols involved were **DNS** and **HTTP** over **TCP**, which facilitated the malicious file download and redirection.
+Implementing **login attempt limitations** and other password security controls will significantly reduce the risk of such attacks recurring.
+
+---
