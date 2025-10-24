@@ -6,7 +6,7 @@
 | ------------------------------------------------------------------- | :-: | :-: |
 | Least Privilege                                                     |     |  ✅  |
 | Disaster recovery plans                                             |     |  ✅  |
-| Password policies                                                   |  ✅  |     |
+| Password policies                                                   |     |  ✅  |
 | Separation of duties                                                |     |  ✅  |
 | Firewall                                                            |  ✅  |     |
 | Intrusion detection system (IDS)                                    |     |  ✅  |
@@ -38,7 +38,7 @@
 
 | Best Practice                                                                                                    | Yes |  No |
 | ---------------------------------------------------------------------------------------------------------------- | :-: | :-: |
-| E.U. customers’ data is kept private/secured                                                                     |  ✅  |     |
+| E.U. customers’ data is kept private/secured                                                                     |     |  ✅  |
 | There is a plan in place to notify E.U. customers within 72 hours if their data is compromised/there is a breach |  ✅  |     |
 | Ensure data is properly classified and inventoried                                                               |     |  ✅  |
 | Enforce privacy policies, procedures, and processes to properly document and maintain data                       |  ✅  |     |
@@ -52,49 +52,20 @@
 | User access policies are established                                                      |     |  ✅  |
 | Sensitive data (PII/SPII) is confidential/private                                         |     |  ✅  |
 | Data integrity ensures the data is consistent, complete, accurate, and has been validated |  ✅  |     |
-| Data is available to individuals authorized to access it                                  |  ✅  |     |
+| Data is available to individuals authorized to access it                                  |     |  ✅  |
 
 ---
 
 ### **Recommendations**
 
-To strengthen Botium Toys’ **security posture** and **regulatory compliance**, the following steps are recommended:
+To improve **Botium Toys’ security posture** and ensure **regulatory compliance**, the following actions are recommended:
 
-1. **Implement least privilege and separation of duties policies**
-
-   * Restrict employee access based on job responsibilities.
-   * Prevent unauthorized access to sensitive data, including cardholder and personal data.
-
-2. **Establish a comprehensive disaster recovery plan and regular data backups**
-
-   * Ensure business continuity in case of data loss or system compromise.
-   * Maintain both on-site and cloud-based backup solutions.
-
-3. **Deploy encryption for sensitive data and transactions**
-
-   * Encrypt credit card and customer PII/SPII data in storage and transmission.
-   * Ensure compliance with **PCI DSS** and **GDPR** encryption standards.
-
-4. **Introduce an Intrusion Detection System (IDS)**
-
-   * Detect and respond to unauthorized or anomalous activity in real time.
-
-5. **Adopt a centralized password management system**
-
-   * Enforce stronger password policies automatically.
-   * Reduce helpdesk load and improve user productivity.
-
-6. **Classify and inventory all assets and data**
-
-   * Support compliance with **GDPR** and improve risk management visibility.
-
-7. **Enhance SOC controls**
-
-   * Develop and enforce formal user access and data handling policies.
-   * Conduct regular audits to validate data integrity and confidentiality.
-
-8. **Regular maintenance schedule for legacy systems**
-
-   * Document intervention procedures.
-   * Consider upgrading or replacing end-of-life systems to reduce risk.
+1. **Implement Least Privilege and Separation of Duties**
+2. **Develop and test a Disaster Recovery Plan and establish regular data backups**
+3. **Upgrade Password Policies and implement a centralized Password Management System**
+4. **Apply Encryption across all sensitive systems and databases**
+5. **Deploy an Intrusion Detection System (IDS)**
+6. **Establish regular maintenance and monitoring for legacy systems**
+7. **Classify and inventory all assets and data to align with GDPR and SOC 2**
+8. **Provide ongoing employee training on data protection and policy compliance**
 
