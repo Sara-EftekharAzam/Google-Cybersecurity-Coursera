@@ -1,0 +1,42 @@
+# **Security Risk Assessment Report**
+
+## **Part 1: Select up to three hardening tools and methods to implement**
+
+To strengthen the organization’s network security and prevent future breaches, the following network hardening tools and methods should be implemented:
+
+1. **Password Policy Enforcement and Privilege Management**
+
+   * Implement strong password policies requiring complex, unique passwords that expire regularly.
+   * Use a **Password Manager** to securely store and share passwords instead of employees reusing or sharing credentials.
+   * Apply the **Principle of Least Privilege (PoLP)** to limit administrative access only to authorized personnel.
+
+2. **Firewall Configuration and Traffic Filtering**
+
+   * Configure firewalls with **inbound and outbound traffic rules** to filter malicious traffic and prevent unauthorized access.
+   * Enable **Intrusion Detection and Prevention Systems (IDS/IPS)** to monitor unusual network activity and block suspicious traffic in real time.
+
+3. **Multifactor Authentication (MFA)**
+
+   * Implement MFA across all systems, especially for administrative accounts and remote access.
+   * Require multiple forms of verification such as a password, a mobile token, or biometric authentication to enhance access control.
+
+---
+
+## **Part 2: Explain your recommendations**
+
+1. **Password Policy Enforcement and Privilege Management**
+
+   * **Effectiveness:** This measure mitigates the risk of unauthorized access caused by password sharing and weak or default passwords. By enforcing strong passwords and limiting user privileges, attackers will find it much more difficult to escalate access or compromise critical systems.
+   * **Implementation Frequency:** Password policy settings should be continuously enforced through centralized identity management tools, with passwords expiring every 60–90 days and access privileges reviewed quarterly.
+
+2. **Firewall Configuration and Traffic Filtering**
+
+   * **Effectiveness:** Properly configured firewalls prevent malicious inbound traffic from entering the network and stop unauthorized outbound communications. Combined with IDS/IPS tools, they enable continuous monitoring and detection of suspicious activity, helping to block potential attacks before damage occurs.
+   * **Implementation Frequency:** Firewall rule reviews and updates should occur monthly or whenever there are changes to the network infrastructure.
+
+3. **Multifactor Authentication (MFA)**
+
+   * **Effectiveness:** MFA significantly strengthens account security by requiring multiple forms of verification. Even if a password is stolen or shared, unauthorized users cannot log in without the second authentication factor. This directly prevents breaches stemming from compromised credentials.
+   * **Implementation Frequency:** MFA should be implemented permanently across all systems and verified regularly to ensure users are properly enrolled and that MFA tokens remain active and secure.
+
+---
