@@ -27,5 +27,3 @@
 This asset inventory highlights devices connected to the home business network and classifies them according to their sensitivity level. The **network router** and **NAS** require the highest level of protection because they handle critical network connectivity and sensitive business data. The **desktop** also needs protection due to personal and business content stored locally. Devices such as the **smart TV** and **smart home assistant** are less sensitive but still require security measures (e.g., strong passwords and firmware updates) to prevent unauthorized access.
 
 ---
-
-Would you like me to make it look like a **filled spreadsheet** (for submission or portfolio) with clearer formatting for each cell, or keep it in this clean Markdown style for easy copying?
