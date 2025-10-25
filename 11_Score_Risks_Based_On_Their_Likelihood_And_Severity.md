@@ -2,30 +2,49 @@
 
 ## **Operational Environment**
 
-The bank is located in a **coastal area with low crime rates**. It employs **100 on-premises staff and 20 remote workers**, handling data for **2,000 individual and 200 commercial accounts**. The bank’s reputation is tied to **local businesses and a professional sports team**, requiring high trust and reliability. Strict **financial regulations** demand daily liquidity compliance with **Federal Reserve** standards and strong **data protection** to secure customer funds.
+The bank is located in a **coastal area with low crime rates**. Many people and systems handle the bank's data—**100 on-premise employees and 20 remote employees**. The customer base of the bank includes **2,000 individual accounts and 200 commercial accounts**. The bank's services are marketed by a **professional sports team** and **ten local businesses** in the community. There are **strict financial regulations** that require the bank to secure its data and funds, such as maintaining sufficient cash reserves each day to meet **Federal Reserve requirements**.
 
 ---
 
-| **Asset** | **Risk(s)**                   | **Description**                                                                          | **Likelihood (1–3)** | **Severity (1–3)** | **Priority (L × S)** |
-| --------- | ----------------------------- | ---------------------------------------------------------------------------------------- | -------------------- | ------------------ | -------------------- |
-| **Funds** | **Business email compromise** | An employee is tricked into sharing confidential banking or login information.           | 2                    | 3                  | **6**                |
-| **Funds** | **Compromised user database** | Customer data is poorly encrypted, exposing sensitive account details.                   | 3                    | 3                  | **9**                |
-| **Funds** | **Financial records leak**    | A database server containing backed-up data is publicly accessible.                      | 2                    | 3                  | **6**                |
-| **Funds** | **Theft**                     | The bank’s safe is left unlocked, allowing unauthorized physical access.                 | 1                    | 2                  | **2**                |
-| **Funds** | **Supply chain disruption**   | Delivery delays due to coastal storms or natural disasters interrupt cash replenishment. | 1                    | 2                  | **2**                |
+| **Asset** | **Risk(s)**                   | **Description**                                               | **Likelihood (1–3)** | **Severity (1–3)** | **Priority (L × S)** |
+| --------- | ----------------------------- | ------------------------------------------------------------- | -------------------- | ------------------ | -------------------- |
+| **Funds** | **Business email compromise** | An employee is tricked into sharing confidential information. | 2                    | 2                  | **4**                |
+| **Funds** | **Compromised user database** | Customer data is poorly encrypted.                            | 2                    | 3                  | **6**                |
+| **Funds** | **Financial records leak**    | A database server of backed up data is publicly accessible.   | 3                    | 3                  | **9**                |
+| **Funds** | **Theft**                     | The bank's safe is left unlocked.                             | 1                    | 3                  | **3**                |
+| **Funds** | **Supply chain disruption**   | Delivery delays due to natural disasters.                     | 1                    | 2                  | **2**                |
 
 ---
 
 ## **Notes**
 
-Security events are possible because the bank manages large volumes of sensitive financial data and customer records, handled by both on-premises and remote employees. **Human error and phishing** increase the risk of business email compromise, while **poor encryption and misconfigured backups** could expose customer and financial data. The **coastal environment** poses occasional natural risks that could disrupt physical supply chains or power availability, affecting banking operations and regulatory compliance.
+Doing business with other companies might increase the risks to data since it presents additional avenues for information to be compromised. The risk of theft is important but may not be a top priority because the bank is located in an area with low crime rates. Environmental risks such as coastal storms could occasionally disrupt operations but are less frequent compared to digital threats like data leaks or poor encryption.
+
+---
+
+### **Risk Scoring Guide**
+
+* **Likelihood (1–3):**
+  1 = Low likelihood
+  2 = Moderate likelihood
+  3 = High likelihood
+
+* **Severity (1–3):**
+  1 = Low impact
+  2 = Moderate impact
+  3 = High impact
+
+* **Priority (L × S = Risk):**
+  Used to determine how quickly a risk should be addressed.
 
 ---
 
 ### **Summary**
 
-* **Highest priority risk:** Compromised user database (Score: 9)
-* **Moderate priority risks:** Business email compromise and financial records leak (Score: 6 each)
-* **Low priority risks:** Theft and supply chain disruption (Score: 2 each)
+* **Highest priority risk:** Financial records leak (**Score: 9**)
+* **Moderate priority risks:** Compromised user database (**6**) and business email compromise (**4**)
+* **Low priority risks:** Theft (**3**) and supply chain disruption (**2**)
 
-These results suggest the bank should **focus first on strengthening data encryption, access controls, and employee security awareness**, while **maintaining physical and environmental safeguards** to reduce lower-impact risks.
+These results indicate that the bank should **prioritize securing databases, improving encryption standards, and monitoring access permissions**, while maintaining basic physical and disaster preparedness measures.
+
+---
