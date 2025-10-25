@@ -1,29 +1,31 @@
 # **Home Office Network Asset Inventory**
 
-| **Asset**                                                | **Network access** | **Owner**                       | **Location**              | **Notes**                                                                                          | **Sensitivity**   |
-| -------------------------------------------------------- | ------------------ | ------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------- | ----------------- |
-| **1. Network router**                                    | Continuous         | Internet Service Provider (ISP) | On-premises               | Has 2.4 GHz and 5 GHz connections. All devices on the home network connect to the 5 GHz frequency. | **Confidential**  |
-| **2. Desktop computer**                                  | Occasional         | Homeowner                       | On-premises               | Contains private and business-related files, including personal photos and financial records.      | **Restricted**    |
-| **3. Guest smartphone**                                  | Occasional         | Friend                          | On and Off-premises       | Connects to the home Wi-Fi temporarily when visiting. Limited access to the guest network.         | **Internal-only** |
-| **4. Smart TV (Streaming device)**                       | Continuous         | Homeowner                       | On-premises (living room) | Connected to Netflix and YouTube accounts. Minimal sensitive data but stores login credentials.    | **Internal-only** |
-| **5. Network-attached storage (NAS)**                    | Continuous         | Homeowner                       | On-premises (office)      | Stores business documents and backups. Contains sensitive client data and financial information.   | **Confidential**  |
-| **6. Smart home assistant (e.g., Google Nest or Alexa)** | Continuous         | Homeowner                       | On-premises (kitchen)     | Collects voice data and integrates with other smart devices. Could be exploited if unsecured.      | **Internal-only** |
+| **Asset**                  | **Network access** | **Owner**                       | **Location**        | **Notes**                                                                                           | **Sensitivity**   |
+| -------------------------- | ------------------ | ------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------- | ----------------- |
+| **Network router**         | Continuous         | Internet service provider (ISP) | On-premises         | Has a 2.4 GHz and 5 GHz connection. All devices on the home network connect to the 5 GHz frequency. | **Confidential**  |
+| **Desktop**                | Occasional         | Homeowner                       | On-premises         | Contains private information, like photos.                                                          | **Restricted**    |
+| **Guest smartphone**       | Occasional         | Friend                          | On and off-premises | Connects to my home network.                                                                        | **Internal-only** |
+| **External hard drive**    | Occasional         | Homeowner                       | On-premises         | Contains music and movies.                                                                          | **Confidential**  |
+| **Streaming media player** | Continuous         | Homeowner                       | On-premises         | Payment card information is stored for movie rentals.                                               | **Internal-only** |
+| **Portable game console**  | Occasional         | Friend                          | On and off-premises | Has a camera and microphone.                                                                        | **Internal-only** |
 
 ---
 
 ## **Categories**
 
-| **Category**      | **Access designation**    |
-| ----------------- | ------------------------- |
-| **Restricted**    | Need-to-know              |
-| **Confidential**  | Limited to specific users |
-| **Internal-only** | Users on-premises         |
-| **Public**        | Anyone                    |
+| **Category**     | **Access designation**    |
+| ---------------- | ------------------------- |
+| **None**         | No relationship           |
+| **Confidential** | Limited to specific users |
+| **Restricted**   | Need-to-know              |
+| **Public**       | Anyone                    |
 
 ---
 
 ## **Summary**
 
-This asset inventory highlights devices connected to the home business network and classifies them according to their sensitivity level. The **network router** and **NAS** require the highest level of protection because they handle critical network connectivity and sensitive business data. The **desktop** also needs protection due to personal and business content stored locally. Devices such as the **smart TV** and **smart home assistant** are less sensitive but still require security measures (e.g., strong passwords and firmware updates) to prevent unauthorized access.
+This asset inventory identifies six devices connected to the home office network. The **network router** and **external hard drive** are the most sensitive, classified as **Confidential**, due to their role in connecting and storing critical data. The **desktop** is **Restricted** because it contains private personal information. Other devices like the **streaming media player**, **portable game console**, and **guest smartphone** are classified as **Internal-only**, as they access the network but pose lower security risk if compromised.
+
+Implementing strong passwords, regular updates, and segmented guest access can help maintain network security and reduce vulnerabilities.
 
 ---
